@@ -5,7 +5,7 @@
       <p class="control">
         <span class="select">
           <select>
-            <option :key="cur" v-for="(_, cur) in currencies" :value="cur">{{ cur }}</option>
+            <option :key="cur" v-for="cur in currencies" :value="cur">{{ cur }}</option>
           </select>
         </span>
       </p>
@@ -31,7 +31,8 @@ export default {
       set (val) { this.$emit('input', val) }
     },
     currencies () {
-      return this.$store.state.currencies
+      // return this.$store.state.currencies
+      return ['EUR']
     }
   }
 }

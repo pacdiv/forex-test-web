@@ -6,8 +6,9 @@
     </section>
     <section>
       <ul>
-        <li v-for="currency in []">
-
+        <li v-for="currency in favouriteCurrencies">
+          <label class="label">{{ currency }}</label>
+          <p>{{ calculatedValueFor(currency)</p>
         </li>
         <li>
           <nuxt-link class="button" to="/new">Add new currency</nuxt-link>
@@ -23,6 +24,17 @@ import Vue from 'vue'
 export default Vue.extend({
   data () {
     return { input: 0 }
+  },
+  computed: {
+    favouriteCurrencies () {
+      // make me work!
+      return []
+    }
+  },
+  methods: {
+    calculatedValueFor (currency: string) {
+      // make me work too!
+    }
   }
 })
 </script>
