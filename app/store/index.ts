@@ -1,4 +1,4 @@
 export const state = () => ({
-  favouriteCurrencies: [],
+  favouriteCurrencies: ['GBP'],
   currencies: { GBP: 0.917981 }
 })
