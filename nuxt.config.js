@@ -1,4 +1,5 @@
 export default {
+  srcDir: 'app',
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
     title: 'forex',
@@ -9,11 +10,14 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+    ],
+    script: [
     ]
   },
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
   css: [
+    '@/assets/global.css'
   ],
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
@@ -31,9 +35,22 @@ export default {
 
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [
+    '@nuxtjs/bulma'
   ],
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
-  }
+    loaders: {
+      vue: {
+        prettify: false
+      }
+    },
+    // https://github.com/nuxt/nuxt.js/issues/3828#issuecomment-658774154
+    devMiddleware: {
+      headers: {
+        'Cache-Control': 'no-store',
+        Vary: '*'
+      }
+    }
+  },
 }
