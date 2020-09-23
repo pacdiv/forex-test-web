@@ -21,7 +21,7 @@ On the homepage, you'll find an input field and list of the user's favourite cur
 
 #### 2️⃣ Task 2
 
-Currently we only have dummy data! Please use [this free API endpoint](https://api.exchangerate.host/latest) to give the user more currencies to work with.
+Currently we only have dummy data! Please use [this free API endpoint](https://exchangerate.host/) to give the user more currencies to work with.
 
 #### 3️⃣ Task 3 (Bonus ✨)
 
