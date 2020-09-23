@@ -7,8 +7,7 @@
     <section>
       <ul>
         <li v-for="currency in favouriteCurrencies" :key="currency">
-          <label class="label">{{ currency }}</label>
-          <p>{{ calculatedValueFor(currency) }}</p>
+          <p><strong>{{ currency }}</strong> {{ calculatedValueFor(currency) }}</p>
         </li>
         <li>
           <nuxt-link class="button" to="/new">Add new currency</nuxt-link>

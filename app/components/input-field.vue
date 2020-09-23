@@ -27,7 +27,7 @@ export default {
   },
   computed: {
     model: {
-      get () { return this.value },
+      get () { return this.value.toFixed(2) },
       set (val) { this.$emit('input', val) }
     },
     currencies () {
