@@ -42,4 +42,8 @@ export default Vue.extend({
 section {
   margin-bottom: 30px;
 }
+
+li {
+  margin-bottom: 10px;
+}
 </style>
