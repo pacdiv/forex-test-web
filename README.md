@@ -8,6 +8,7 @@ We need to build a foreign exchange calculator so the finance team at Soho House
 
 The JS team has started this task but we need you to finish it! Have a look around the codebase, and then follow the instructions in the [Build Setup](#build-setup) section to get the app running.
 
+
 Some notes:
 
 - Please treat this is as if you were really pairing, so talk your partner through what you're thinking and feel free to ask questions or use google.
@@ -17,7 +18,7 @@ Some notes:
 
 #### 1️⃣ Task 1
 
-On the homepage, you'll find an input field and list of the user's favourite currencies. Please complete this functionality so the user can input a value and see that value converted into their favourite currencies.
+On the homepage, you'll find an input field and list of the user's favourite currency. Please complete this functionality so the user can input a value and see that value converted into their favourite currency.
 
 #### 2️⃣ Task 2
 
@@ -29,7 +30,7 @@ If you click the _Add new currency_ button, you'll find that the user can't actu
 
 #### 4️⃣ Task 4 (Extra Bonus 🚀)
 
-The input field on the homepage has a dropdown next to it, but it currently only has `EUR` in it. Please allow the user to choose from any of the available currencies for their input value.
+The input field on the homepage has a dropdown next to it, but it currently only has `GBP` in it. Please allow the user to choose from any of the available currencies for their input value.
 
 ### Build Setup
 
