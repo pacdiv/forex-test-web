@@ -7,7 +7,9 @@
     <section>
       <ul>
         <li v-for="currency in favouriteCurrencies" :key="currency">
-          <p><strong>{{ currency }}</strong> {{ calculatedValueFor(currency) }}</p>
+          <p>
+            <strong>{{ currency }}</strong> {{ calculatedValueFor(currency) }}
+          </p>
         </li>
         <li>
           <nuxt-link class="button" to="/new">Add new currency</nuxt-link>
@@ -22,18 +24,28 @@ import Vue from 'vue'
 
 export default Vue.extend({
   data () {
-    return { input: 0 }
+    return {
+      input: 0,
+    }
+  },
+  mounted() {
+    if (!this.$store.state.currencies.length)
+      this.$store.dispatch('updateCurrencies')
   },
   computed: {
     favouriteCurrencies () {
-      // make me work!
-      return []
+      return this.$store.state.favouriteCurrencies
     }
   },
   methods: {
     calculatedValueFor (currency: string) {
-      // make me work too!
-    }
+      if (!this.input) return 0
+      type currencyOptions = {
+        [key: string]: number
+      }
+      const currencies: currencyOptions = this.$store.state.currencies
+      return this.input * (currencies[currency] || 1)
+    },
   }
 })
 </script>
