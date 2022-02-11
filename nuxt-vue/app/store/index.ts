@@ -22,8 +22,8 @@ export const actions = {
   addFavouriteCurrency(ctx: Context, newFavouriteCurrency: string) {
     ctx.commit('addFavouriteCurrency', newFavouriteCurrency)
   },
-  updateCurrencies(ctx: Context) {
-    const requestURL = 'https://api.exchangerate.host/latest';
+  updateCurrencies(ctx: Context, base: string = 'EUR') {
+    const requestURL = `https://api.exchangerate.host/latest?base=${base}`;
     const request = new XMLHttpRequest();
     request.open('GET', requestURL);
     request.responseType = 'json';
