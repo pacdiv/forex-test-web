@@ -10,7 +10,7 @@
   </div>
 </template>
 
-<script lang="ts">
+<script>
 export default {
   mounted() {
     if (!this.$store.state.currencies.length)
@@ -25,7 +25,7 @@ export default {
     }
   },
   methods: {
-    saveCurrency (curr: string) {
+    saveCurrency (curr) {
       this.$store.dispatch('addFavouriteCurrency', curr)
     },
   }

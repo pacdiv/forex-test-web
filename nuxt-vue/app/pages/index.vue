@@ -2,7 +2,11 @@
   <div>
     <h1 class="title">Foreign Exchange Calculator</h1>
     <section>
-      <input-field v-model="input" />
+      <input-field
+        v-model="input"
+        default-currency="EUR"
+        @currencyChange="onCurrencyChange"
+      />
     </section>
     <section>
       <ul>
@@ -46,6 +50,9 @@ export default Vue.extend({
       const currencies: currencyOptions = this.$store.state.currencies
       return this.input * (currencies[currency] || 1)
     },
+    onCurrencyChange(nextSelectedCurrency: string) {
+      this.$store.dispatch('updateCurrencies', nextSelectedCurrency)
+    }
   }
 })
 </script>
